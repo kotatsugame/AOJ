@@ -1,0 +1,2 @@
+#include<bits/stdc++.h>
+using namespace std;int l(string a,string b){int m=a.size(),n=b.size(),i=0,j,s=0,c[1001][1001]={};for(a=' '+a,b=' '+b;++i<=m;)for(j=0;++j<=n;s=s<c[i][j]?c[i][j]:s)c[i][j]=a[i]==b[j]?c[i-1][j-1]+1:c[i-1][j]>c[i][j-1]?c[i-1][j]:c[i][j-1];return s;}main(){string a,b;int n;for(cin>>n;n--;cin>>a>>b,cout<<l(a,b)<<endl);}
